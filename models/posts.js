@@ -4,8 +4,10 @@ const postSchema = mongoose.Schema({
     Headline: String,
     Summary: String,
     URL: String,
-    PictureURL: String,
-    Saved: Boolean
+    Saved: {type:Boolean,
+            default: false
+    },
+    Notes: [String]
 });
 
-module.exports = mongoose.model('Posts', postSchema);
+module.exports = mongoose.model('posts', postSchema);
