@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-Parser');
+const bodyParser = require('body-parser');
 const configDB = require('./config/database');
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
@@ -19,14 +19,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.win32.join(__dirname, 'public')));
 
 
-// require('./route')(app);
-
+require('./route')(app);
 
 // test route below
 // *****************************************************************
-app.get('/', function(req,res){
-    res.send('hello');
-})
+// app.get('/', function(req,res){
+//     res.send('hello');
+// })
 // *****************************************************************
 
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const savedArticles_controller = require('../controllers/savedArctiles');
+const savedArticles_controller = require('../controllers/savedArticles');
 
 router.get('/',savedArticles_controller.index);
 router.put('/remove',savedArticles_controller.remove);

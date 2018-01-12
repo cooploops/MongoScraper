@@ -1,0 +1,21 @@
+{{#unless posts}}
+<div class="row">
+    <div class="col-xs-12">
+        <h3>There's no articles!!!</h3>
+    </div>
+</div>
+{{/unless}}
+
+{{#if posts}}
+{{#each posts}}
+<div class="row">
+    <div class="col-xs-9">
+        <h4><a href={{this.URL}}>{{this.Headline}}</a></h4>
+        <p>{{this.Summary}}</p>
+    </div>
+    <div class="col-xs-3">
+        <button type="button" class="btn btn-primary">Save This Article</button>
+    </div>
+</div>
+{{/each}}
+{{/if}}
