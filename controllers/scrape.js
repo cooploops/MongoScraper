@@ -1,10 +1,11 @@
 const request = require('request');
 const cheerio = require('cheerio');
+const rp = require('request-promise');
 
 const posts = require('../models/posts');
 
 exports.scrape = function (req,res){
-    request('https://www.theonion.com/', function(error,response,html){
+    rp('https://www.theonion.com/', function(error,response,html){
         const $ = cheerio.load(html);
         $('article').each(function(i,element){
             let title = $(element).find('a').text();
@@ -26,6 +27,6 @@ exports.scrape = function (req,res){
             })
             }
         })
-    })
-    res.redirect('/');
+    }).then(res.redirect('/'));
+    
 }
