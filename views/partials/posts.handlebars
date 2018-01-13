@@ -8,14 +8,16 @@
 
 {{#if posts}}
 {{#each posts}}
-<div class="row">
-    <div class="col-xs-9">
+    {{#unless this.Saved}}
+<div class="row mb-4">
+    <div class="col-md-12">
         <h4><a href={{this.URL}}>{{this.Headline}}</a></h4>
         <p>{{this.Summary}}</p>
     </div>
-    <div class="col-xs-3">
-        <a type="button" id="getArticles" class="btn btn-primary" href="/scrapePosts">Save This Article</a>
+    <div class="col-md-2 offset-md-9 offset-lg-10">
+        <button type="button" class="btn btn-primary saveArticleBtn" article-id={{this._id}}>Save This Article</button>
     </div>
 </div>
+    {{/unless}}
 {{/each}}
 {{/if}}

@@ -21,13 +21,6 @@ app.use(express.static(path.win32.join(__dirname, 'public')));
 
 require('./route')(app);
 
-// test route below
-// *****************************************************************
-// app.get('/', function(req,res){
-//     res.send('hello');
-// })
-// *****************************************************************
-
 
 // setup mongoose connection
 mongoose.connect(configDB.url,{
