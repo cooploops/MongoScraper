@@ -7,7 +7,7 @@ const exphbs = require('express-handlebars');
 
 const app = express();
 // set views folder
-app.set('views', path.win32.join(__dirname, "views"));
+app.set('views', path.join(__dirname, "views"));
 // setup handlebars view engine
 app.engine('handlebars', exphbs({
     defaultLayout:'main'
@@ -16,7 +16,7 @@ app.set('view engine', 'handlebars');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.win32.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 require('./route')(app);
