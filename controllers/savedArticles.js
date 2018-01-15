@@ -3,7 +3,7 @@ const posts = require('../models/posts');
 exports.index = function(req, res){
     posts.find({Saved:true}).then(function(savedArt){
         console.log(`these are the saved articles ${savedArt}`)
-        res.render('savedArticles',{
+        res.render('savedArticles/savedArticles',{
             articles:savedArt
         });
     });
