@@ -1,4 +1,4 @@
-# Cryptolio
+# MongoWebScraper
 
 ## Hosted on Heroku
  - https://fathomless-inlet-17347.herokuapp.com/
@@ -19,14 +19,11 @@ The app is a web scraper of the popular satire fake-news site TheOnion (https://
 - Node/NPM
 - Javascript
 - jQuery/AJAX
-- MySQL
-- Sequelize
-- Express
+- Mongo/Mongoose
 - Handlebars
-- Gulp
-- Chart.js
+- Express
 - request, and request-promise node package
-- Passport
+- Cheerio.js
 
 ## Code Explanation
 ### Overall Lesson Learned

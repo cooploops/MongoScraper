@@ -1,0 +1,18 @@
+                {{#unless this.Notes}}
+                <div class="row px-3">
+                    <div class="col-xs-12">
+                        <p>No Comments for this article yet</p>
+                    </div>
+                </div>
+                {{/unless}}
+                
+                {{#if this.Notes}}
+                {{#each this.Notes}}
+                    <div class="row m-2" style="border: 1px solid black">
+                        <div class="col-xs-12">
+                            <p class="p-1">{{this.body}}</p>
+                            <button class="btn btn-info p-1 removeComment" article-id={{this._id}} href="/savedArticles/remove">remove</button>
+                        </div>
+                    </div>
+                {{/each}}
+                {{/if}}

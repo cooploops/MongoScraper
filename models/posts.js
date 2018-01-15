@@ -7,7 +7,7 @@ const postSchema = mongoose.Schema({
     Saved: {type:Boolean,
             default: false
     },
-    Notes: [String]
+    Notes: [{body:String}]
 });
 
 module.exports = mongoose.model('posts', postSchema);
